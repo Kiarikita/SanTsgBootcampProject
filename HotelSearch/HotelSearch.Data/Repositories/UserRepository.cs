@@ -1,10 +1,8 @@
 ﻿using HotelSearch.Data.Repositories.Interfaces;
 using HotelSearch.Domain.Users;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace HotelSearch.Data.Repositories
 {

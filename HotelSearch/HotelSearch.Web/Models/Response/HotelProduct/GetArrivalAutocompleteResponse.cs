@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HotelSearch.Web.Models.Response.HotelProduct
 {
     public class GetArrivalAutocompleteResponse
-    {
+    {  
+            public Header header { get; set; }
+            public Body body { get; set; }
+        
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public class Body
         {
@@ -16,7 +18,11 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
             public string id { get; set; }
             public string name { get; set; }
         }
-
+        public class Hotel
+        {
+            public string id { get; set; }
+            public string name { get; set; }
+        }
         public class Country
         {
             public string id { get; set; }
@@ -29,18 +35,17 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
             public string latitude { get; set; }
         }
 
+        public class GiataInfo
+        {
+            public string hotelId { get; set; }
+            public string destinationId { get; set; }
+        }
+
         public class Header
         {
             public string requestId { get; set; }
             public bool success { get; set; }
-            public DateTime responseTime { get; set; }
             public List<Message> messages { get; set; }
-        }
-
-        public class Hotel
-        {
-            public string id { get; set; }
-            public string name { get; set; }
         }
 
         public class Item
@@ -50,9 +55,9 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
             public Country country { get; set; }
             public State state { get; set; }
             public City city { get; set; }
-            public int provider { get; set; }
-            public int hotelCount { get; set; }
+            public GiataInfo giataInfo { get; set; }
             public Hotel hotel { get; set; }
+            public int provider { get; set; }
         }
 
         public class Message
@@ -63,11 +68,6 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
             public string message { get; set; }
         }
 
-        public class Root
-        {
-            public Body body { get; set; }
-            public Header header { get; set; }
-        }
 
         public class State
         {
@@ -77,5 +77,6 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
 
 
     }
+
 }
 

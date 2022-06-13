@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
-namespace HotelSearch.Data.Repositories.Interfaces
+namespace HotelSearch.Data.Repositories
 {
     public interface IRepository<T> where T : class
     {

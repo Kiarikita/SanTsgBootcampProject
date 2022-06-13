@@ -15,7 +15,7 @@ namespace HotelSearch.Web.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IEmailService _emailService;
 
-        public UserController(HotelSearchDbContext context,  IUserRepository userRepository, IEmailService emailService)
+        public UserController(HotelSearchDbContext context, IUserRepository userRepository, IEmailService emailService)
         {
             _context = context;
             _userRepository = userRepository;
@@ -37,7 +37,7 @@ namespace HotelSearch.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(User user)
-        {   
+        {
 
             if (ModelState.IsValid)
             {
@@ -47,7 +47,7 @@ namespace HotelSearch.Web.Controllers
 
                 return RedirectToAction("Index");
             }
-            
+
             return View(user);
         }
 

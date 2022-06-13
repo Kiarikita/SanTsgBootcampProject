@@ -2,9 +2,8 @@
 {
     public class GetArrivalAutocompleteRequest
     {
-        public int ProductType { get; set; } = 2;
-        public string Query { get; set; } = "anta";
-        public string Culture { get; set; } = "en-US";
-
+        public int ProductType { get; set; }
+        public string Query { get; set; } 
+        public string Culture { get; set; }
     }
 }
