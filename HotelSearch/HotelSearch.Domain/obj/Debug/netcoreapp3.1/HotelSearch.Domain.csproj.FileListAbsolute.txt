@@ -1,0 +1,10 @@
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\bin\Debug\netcoreapp3.1\HotelSearch.Domain.deps.json
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\bin\Debug\netcoreapp3.1\HotelSearch.Domain.dll
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\bin\Debug\netcoreapp3.1\HotelSearch.Domain.pdb
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.AssemblyInfo.cs
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.dll
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Domain\obj\Debug\netcoreapp3.1\HotelSearch.Domain.pdb

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="MimeKit" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSearch.Data\HotelSearch.Data.csproj" />
+    <ProjectReference Include="..\HotelSearch.Domain\HotelSearch.Domain.csproj" />
+    <ProjectReference Include="..\HotelSearch.Shared\HotelSearch.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

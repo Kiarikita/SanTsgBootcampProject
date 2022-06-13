@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HotelSearch.Web.Models.Response.HotelProduct.PriceSearchHotelResponse.Item>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+ 
+<table class="mt-4 table table-hover table-bordered table-sm">
+    <thead>
+        <tr> 
+            <td>Otel</td>
+            <td>Şehir</td> 
+             
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.hotel.name</td>
+                <td></td> 
+         
+
+            </tr>
+         
+        }
+       
+    </tbody>
+</table>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cities").autocomplete('@Url.Action("CityList", "Hotel")');
+        });
+</script>
+}

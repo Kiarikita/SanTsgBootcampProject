@@ -1,0 +1,16 @@
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Data.deps.json
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Data.runtimeconfig.json
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Data.runtimeconfig.dev.json
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Data.dll
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Data.pdb
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Domain.dll
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\bin\Debug\netcoreapp3.1\HotelSearch.Domain.pdb
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.csproj.AssemblyReference.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.AssemblyInfo.cs
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.csproj.CopyComplete
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.dll
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.pdb
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Data\obj\Debug\netcoreapp3.1\HotelSearch.Data.genruntimeconfig.cache

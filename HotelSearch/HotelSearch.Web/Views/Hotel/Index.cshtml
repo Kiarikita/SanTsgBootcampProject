@@ -1,0 +1,69 @@
+﻿@model HotelSearch.Web.Models.Response.HotelProduct.PriceSearchHotelResponse
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1> City List</h1>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  
+@*<input type="text" id="cities" name="cities" class="acInput"/>
+
+<div class="form-group">
+    <label for="input-url4">Arama Butonu</label>
+    <input type="text" class="form-control" placeholder="Timezone" id="input-url4" data-filter="https://localhost:44385/api/productservice/getarrivalautocomplete/?id=TR">
+</div>*@
+
+<script>
+    document.addEventListener('DOMContentLoaded', e => {
+        $('#input-url4').autocomplete({
+            onPick(el, item) {
+                console.log('option', item)
+            }
+        })
+        $('#input-url4').on('pick.bs.autocomplete', e => {
+            let item = e.item
+            console.log('event', item)
+        })
+    }, false);
+</script>
+
+
+
+
+<table class="mt-4 table table-hover table-bordered table-sm">
+    <thead>
+        <tr>
+            <td>Ülke id</td>
+            <td>Ülke</td>
+            <td>Şehir</td> 
+             
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.body.items.Where(a=>a.country.id.Equals("TR")))
+        {
+            <tr>
+                <td>@item.country.id</td>
+                <td>@item.country.name</td>
+                <td>@item.city.name</td> 
+         
+
+            </tr>
+         
+        }
+       
+    </tbody>
+</table>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cities").autocomplete('@Url.Action("CityList", "Hotel")');
+        });
+    </script>
+}

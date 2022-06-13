@@ -1,0 +1,88 @@
+﻿@model HotelSearch.Web.Models.Response.HotelProduct.PriceSearchHotelResponse
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>     
+<a asp-controller="Hotel" asp-action="PriceSearch" asp-route-cityid="23494">Antalya Oteli</a>
+@section scripts{
+    <script>
+        const list = document.querySelector('ul.results');
+        const getAll = document.getElementById('get-cars');
+ 
+        getAll.addEventListener('click', () => {
+            showCars();
+        });
+ 
+        const showCars = () => {
+            list.innerHTML = '';
+            fetch("/api/cars")
+            .then(response => response.json())
+            .then(cars => {
+                for(let i = 0;i < cars.length;i++){
+                    let item = document.createElement('li');
+                    item.innerText =  `${cars[i].id} ${cars[i].make} ${cars[i].model}, ${cars[i].year} £${cars[i].price}`;
+                    item.classList.add('edit-car');
+                    item.dataset.id = cars[i].id;
+                    item.dataset.bsToggle = 'modal';
+                    item.dataset.bsTarget = '#car-modal';
+                    item.addEventListener('click', (event) =>{
+                        getCar(event.target.dataset.id);
+                    });
+                    list.appendChild(item);
+                }
+            });
+        }
+    </script>
+    }
+@*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Aradığınız Tüm Oteller Bir Tık Uzağınızda !</p>
+</div>
+
+<form method="get" action="@Url.Action("Search", "HomeController")">
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Şehir..." aria-label="City" >
+  <div class="input-group-append">
+    <button class="btn btn-outline-primary" type="button"><i class="bi bi-search"></i> Search</button>
+  </div>
+</div>
+</form>
+
+<input id="mySearchField" name="search" placeholder="Search.." type="text">
+
+<button id="mySearchButton">Search</button>
+<div id="myContentArea""> </div>
+
+<script>
+
+       $(function() {
+        var _myContentArea = document.getElementById("myContentArea");
+        var _mySearchButton = document.getElementById("mySearchButton");
+        _mySearchButton.onclick = getData;
+
+        function getData(){
+        var _mySearchField = document.getElementById("mySearchField");
+            $.ajax({
+            url: " http://service.stage.paximum.com/v2/api/productservice/getarrivalautocomplete " +_mySearchField.value,
+           method: "GET",
+            dataType: "json",
+            success: function(data) {
+                var str = "";          
+               for(var i = 0; i < data.  ; i++)
+               {
+
+                 str +='Otel Adı : ' + data.jobsBreakdown[i].name + ' <br> Price : ' +data.jobsBreakdown[i].price <br>' ;
+               }
+              _myContentArea.innerHTML = str;
+            }
+            });
+        }
+
+    });
+    </script>*@
