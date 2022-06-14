@@ -7,7 +7,6 @@ namespace HotelSearch.Web.Models.Response.HotelProduct
             public Header header { get; set; }
             public Body body { get; set; }
         
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public class Body
         {
             public List<Item> items { get; set; }

@@ -60,7 +60,7 @@ namespace HotelSearch.Web.Controllers
             return View(response);
         }
 
-        public IActionResult HotelList(string City/*, string Country*/)
+        public IActionResult HotelList(string City)
         {
 
             Models.Request.HotelProduct.GetArrivalAutocompleteRequest request = new Models.Request.HotelProduct.GetArrivalAutocompleteRequest();

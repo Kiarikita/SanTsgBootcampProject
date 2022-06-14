@@ -10,17 +10,6 @@
 
 </head>     
 <body>
-
-<h2>Autocomplete</h2>
-
-<p>Start typing:</p>
-@*
-@using (Html.BeginForm("HotelList", "Home", FormMethod.Post))
-{
-    @Html.TextBoxFor(model => model.body.items)
-    @Html.ValidationMessageFor(model => model.body.items)
-    <button type="submit">Search</button>
-}*@
 <a class="btn btn-outline-primary" asp-action="Index"  onclick="@("window.location.href='" + @Url.Action("Index", "HotelController") + "'");" ><i class="bi bi-pencil-square"></i>Şehirleri Listele </a>
 
 </body>

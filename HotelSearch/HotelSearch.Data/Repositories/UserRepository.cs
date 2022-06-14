@@ -14,9 +14,7 @@ namespace HotelSearch.Data.Repositories
 
         public List<User> GetAll(int userId)
         {
-            return _context.Users.Where(x => x.Id == userId)
-                 .ToList();
-
+            return _context.Users.Where(x => x.Id == userId).ToList();
         }
     }
 

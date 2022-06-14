@@ -7,6 +7,8 @@ using System.Text;
 
 namespace HotelSearch.Data
 {
+    /*db ile ilgili her aksiyonu anlık olarak dbye yansıtmasın tüm aksiyonları biriktirip bütün olarak bir defada
+     tek bir connection üzerinden gerçekleştirsin*/
     public interface IUnitOfWork : IDisposable
     {
         public IUserRepository Users { get; }
@@ -15,17 +17,16 @@ namespace HotelSearch.Data
 
     public class UnitOfWork : IUnitOfWork
     {
-
         private readonly HotelSearchDbContext _context;
+
         public IUserRepository Users { get; private set; }
+
         public UnitOfWork(HotelSearchDbContext context)
         {
             _context = context;
 
             Users = new UserRepository(context);
         }
-
-
 
         public void Complete()
         {

@@ -22,7 +22,6 @@ namespace HotelSearch.Data.Repositories
         public void AddRange(IEnumerable<T> entities)
         {
             _context.Set<T>().AddRange(entities);
-
         }
 
         public IEnumerable<T> Find(Expression<Func<T, bool>> filter)

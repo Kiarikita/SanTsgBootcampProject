@@ -10,7 +10,6 @@ namespace HotelSearch.Application.Services
 {
     public class UserService : IUserService
     {
-
         private readonly IUnitOfWork _unitOfWork;
         private readonly IEmailService _emailService;
         private readonly ILogger<UserService> _logger;
@@ -22,7 +21,7 @@ namespace HotelSearch.Application.Services
             _logger = logger;
         }
 
-        public async Task CreateUser(User user)
+        public async Task CreateUser(User user) //yeni kaydolan kullanıcı için onay maili gönderir
         {
             _unitOfWork.Users.Add(user);
 

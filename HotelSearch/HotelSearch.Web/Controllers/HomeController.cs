@@ -11,9 +11,10 @@ using System.Threading.Tasks;
 
 namespace HotelSearch.Web.Controllers
 {
-    public class HomeController : Controller // Ülke filtresi
+    public class HomeController : Controller 
     {
         private string token = "";
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -48,24 +49,6 @@ namespace HotelSearch.Web.Controllers
             request.Password = "test!23";
             Models.Response.Authentication.LoginResponse response = Api.Post<Models.Response.Authentication.LoginResponse>(Global.LoginUrl, request);
             this.token = response.body.token;
-        }
-
-        public IActionResult HotelList(string City/*, string Country*/)
-        {
-
-            Models.Request.HotelProduct.GetArrivalAutocompleteRequest request = new Models.Request.HotelProduct.GetArrivalAutocompleteRequest();
-            request.Culture = "en-US";
-            request.ProductType = 2;
-            request.Query = "Antalya";
-
-            Models.Response.HotelProduct.GetArrivalAutocompleteResponse response = Api.Post<Models.Response.HotelProduct.GetArrivalAutocompleteResponse>(Global.GetArrivalautocompleteUrl, request, token);
-
-            var productType = response.body.items.Where(a => a.type == 2).ToList();
-            var query = response.body.items.Where(a => a.city.name == "Antalya").ToList();
-
-
-
-            return View(productType);
         }
 
 
