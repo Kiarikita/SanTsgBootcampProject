@@ -56,15 +56,18 @@ namespace HotelSearch.Web.Controllers
             Models.Request.HotelProduct.GetArrivalAutocompleteRequest request = new Models.Request.HotelProduct.GetArrivalAutocompleteRequest();
             request.Culture = "en-US";
             request.ProductType = 2;
-            request.Query = City;
+            request.Query = "Antalya";
 
             Models.Response.HotelProduct.GetArrivalAutocompleteResponse response = Api.Post<Models.Response.HotelProduct.GetArrivalAutocompleteResponse>(Global.GetArrivalautocompleteUrl, request, token);
 
-            var myList = response.body.items.Where(a => a.type == 2).ToList();
+            var productType = response.body.items.Where(a => a.type == 2).ToList();
+            var query = response.body.items.Where(a => a.city.name == "Antalya").ToList();
 
 
 
-            return View(myList);
+            return View(productType);
         }
+
+
     }
 }

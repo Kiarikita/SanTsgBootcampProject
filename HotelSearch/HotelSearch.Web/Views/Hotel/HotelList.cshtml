@@ -1,16 +1,12 @@
 ﻿@model IEnumerable<HotelSearch.Web.Models.Response.HotelProduct.GetArrivalAutocompleteResponse.Item>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 
  
 <table class="mt-4 table table-hover table-bordered table-sm">
     <thead>
         <tr> 
-            <td>Otel</td>
-            <td>Şehir</td> 
+            <td>Şehir</td>
+            <td>Otel</td> 
+            <td>Listele</td> 
              
         </tr>
     </thead>
@@ -18,21 +14,22 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.hotel.name</td>
                 <td>@item.city.name</td> 
-         
-
+                <td>@item.hotel.name</td>
+                <td class="align-middle">
+                     <a class="btn btn-outline-primary" asp-action="ProductInfoList"  onclick="@("window.location.href='" + @Url.Action("ProductInfoList", "HotelController") + "'");" ><i class="bi bi-pencil-square"></i>Listele </a>
+                </td>
             </tr>
          
         }
        
     </tbody>
 </table>
-@section Scripts
+@*@section Scripts
 {
     <script type="text/javascript">
         $(document).ready(function () {
             $("#cities").autocomplete('@Url.Action("CityList", "Hotel")');
         });
 </script>
-}
+}*@

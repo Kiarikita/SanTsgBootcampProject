@@ -1,0 +1,41 @@
+﻿@model HotelSearch.Web.Models.Response.HotelProduct.GetArrivalAutocompleteResponse
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1> Şehir Listesi</h1>
+<table class="mt-4 table table-hover table-bordered table-sm">
+    <thead>
+        <tr>
+            <td>Ülke id</td>
+            <td>Ülke</td>
+            <td>Şehir</td> 
+            <td>Listele</td> 
+             
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.body.items.Where(a=>a.country.id.Equals("TR")))
+        {
+            <tr>
+                <td>@item.country.id</td>
+                <td>@item.country.name</td>
+                <td>@item.city.name</td> 
+                <td class="align-middle">
+                     <a class="btn btn-outline-primary" asp-action="HotelList"  onclick="@("window.location.href='" + @Url.Action("HotelList", "HotelController") + "'");" ><i class="bi bi-pencil-square"></i>Listele </a>
+                </td>
+            </tr>
+        }
+       
+    </tbody>
+</table>
+@*@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cities").autocomplete('@Url.Action("CityList", "Hotel")');
+        });
+</script>
+}*@

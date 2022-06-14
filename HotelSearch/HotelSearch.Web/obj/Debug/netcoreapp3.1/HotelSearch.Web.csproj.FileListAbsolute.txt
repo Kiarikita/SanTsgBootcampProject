@@ -278,3 +278,5 @@ C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj
 C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj\Debug\netcoreapp3.1\HotelSearch.Web.csproj.CopyComplete
 C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj\Debug\netcoreapp3.1\HotelSearch.Web.genruntimeconfig.cache
 C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateItem.cshtml.g.cs
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\TrCityList.cshtml.g.cs
+C:\Users\Asus\source\repos\SanTsgBootcampProject\HotelSearch\HotelSearch.Web\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\ProductInfoList.cshtml.g.cs

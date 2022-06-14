@@ -1,41 +1,27 @@
 ﻿@model HotelSearch.Web.Models.Response.HotelProduct.GetArrivalAutocompleteResponse
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
+    ViewData["Title"] = "Home Page";
 }
 
-<h1> USER LIST</h1>
-<input type="text" id="cities" name="cities" class="acInput"/>
-<table class="mt-4 table table-hover table-bordered table-sm">
-    <thead>
-        <tr>
-            <td>Ülke id</td>
-            <td>Ülke</td>
-            <td>Şehir</td> 
-             
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.body.items.Where(a=>a.country.id.Equals("TR")))
-        {
-            <tr>
-                <td>@item.country.id</td>
-                <td>@item.country.name</td>
-                <td>@item.city.name</td> 
-         
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            </tr>
-         
-        }
-       
-    </tbody>
-</table>
-@section Scripts
+</head>     
+<body>
+
+<h2>Arama Butonu</h2>
+
+<p></p>
+@*
+@using (Html.BeginForm("HotelList", "Home", FormMethod.Post))
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#cities").autocomplete('@Url.Action("CityList", "Hotel")');
-        });
-</script>
-}
+    @Html.TextBoxFor(model => model.body.items)
+    @Html.ValidationMessageFor(model => model.body.items)
+    <button type="submit">Search</button>
+}*@
+
+<a class="btn btn-outline-primary" asp-area="" asp-controller="Hotel" asp-action="TrCityList">Şehirleri Listele</a>
+</body>
+</html>

@@ -16,6 +16,7 @@ namespace HotelSearch.Web.Controllers
         private readonly ILogger<HotelController> _logger;
 
        List<string> cities = new List<string>();
+
         public HotelController(HotelSearchDbContext context, ILogger<HotelController> logger, IEmailService emailservice)
         {
             _context = context;
@@ -34,6 +35,11 @@ namespace HotelSearch.Web.Controllers
         }
    
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult TrCityList()
         {
 
             Models.Request.HotelProduct.GetArrivalAutocompleteRequest request = new Models.Request.HotelProduct.GetArrivalAutocompleteRequest();
@@ -60,22 +66,35 @@ namespace HotelSearch.Web.Controllers
             Models.Request.HotelProduct.GetArrivalAutocompleteRequest request = new Models.Request.HotelProduct.GetArrivalAutocompleteRequest();
             request.Culture = "en-US";
             request.ProductType = 2;
-            request.Query = City;
+            request.Query = "Antalya";
 
             Models.Response.HotelProduct.GetArrivalAutocompleteResponse response = Api.Post<Models.Response.HotelProduct.GetArrivalAutocompleteResponse>(Global.GetArrivalautocompleteUrl, request, token);
 
-            var myList = response.body.items.Where(a => a.type == 2).ToList();
+            var hotelList = response.body.items.Where(a => a.type == 2).ToList();
 
- 
-
-            return View(myList);
+            return View(hotelList);
         }
 
-
-        public JsonResult CityList()
+        public IActionResult ProductInfoList(string Hotel/*, string Country*/)
         {
-            return Json(cities);
+
+            Models.Request.ProductInfoRequest.Root request = new Models.Request.ProductInfoRequest.Root();    
+            request.productType = 2;
+            request.ownerProvider = 2;
+            request.product = "102576";
+            request.culture = "en-US";
+
+            Models.Response.ProductInfoResponse.Root response = Api.Post<Models.Response.ProductInfoResponse.Root>(Global.ProductInfoUrl, request, token);
+
+            var hotelInfoList = response.body.hotel;
+
+            return View(hotelInfoList);
         }
+
+        //public JsonResult CityList()
+        //{
+        //    return Json(cities);
+        //}
  
     }
 }
